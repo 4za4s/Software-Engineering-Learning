@@ -14,9 +14,16 @@
 </head>
 
 <body>
+    <?php
+
+    $projects = ["Helloworld", "Conditions"]
+
+    ?>
+
     <ul>
         <h1>Projects</h1>
-        <li><a href="HelloWorld.php">Hello World</a></li>
-        <li><a href="Conditions.php">Conditions</a></li>
+        <?php foreach ($projects as $project) : ?>
+            <li> <?= "<a href=\"$project.php\">$project</a>" ?></li>
+        <?php endforeach; ?>
     </ul>
 </body>
